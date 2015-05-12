@@ -88,7 +88,7 @@ public class NavigationDrawerFragment extends Fragment {
 		dataList.add(new DrawerItem("Message",
 				android.R.drawable.ic_menu_camera));
 		dataList.add(new DrawerItem("Likes",
-				android.R.drawable.ic_dialog_alert));
+				android.R.drawable.ic_dialog_email));
 		dataList.add(new DrawerItem("Cabezera 2"));
 		// dataList.add(new DrawerItem("Games", R.drawable.ic_action_gamepad));
 		// dataList.add(new DrawerItem("Lables", R.drawable.ic_action_labels));
@@ -130,6 +130,7 @@ public class NavigationDrawerFragment extends Fragment {
 					@Override
 					public void onItemClick(AdapterView<?> parent, View view,
 							int position, long id) {
+						// Si no se selecciona una cabecera
 						if (dataList.get(position).getTitle() == null) {
 							selectItem(position);
 						}
