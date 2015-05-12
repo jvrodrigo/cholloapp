@@ -19,7 +19,7 @@ public class PageFourFragment extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        return inflater.inflate(R.layout.pageone_fragment, container, false);
+        return inflater.inflate(R.layout.pagefour_fragment, container, false);
     }
 
     @Override
