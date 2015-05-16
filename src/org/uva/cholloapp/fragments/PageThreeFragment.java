@@ -46,4 +46,8 @@ public class PageThreeFragment extends Fragment
     {
         super.onResume();
     }
+    @Override
+    public void onDestroyView(){
+    	super.onDestroyView();
+    }
 }

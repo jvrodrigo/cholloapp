@@ -5,22 +5,34 @@ import org.uva.cholloapp.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView.FindListener;
+import android.widget.TextView;
 
 public class PageOneFragment extends Fragment
 {
+	private static String fragmentTitle = PageOneFragment.class.getSimpleName();
+	TextView title;
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+       
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        return inflater.inflate(R.layout.pageone_fragment, container, false);
+    	View rootView = inflater.inflate(R.layout.pageone_fragment, container, false);
+    	
+    	title = (TextView) rootView.findViewById(R.id.oneFragmentTextView);
+    	title.setText("Holllllaaa");
+    	title.setTextSize(25);
+        return rootView;
     }
 
     @Override
@@ -45,5 +57,13 @@ public class PageOneFragment extends Fragment
     public void onResume()
     {
         super.onResume();
+    }
+    @Override
+    public void onDestroyView(){
+    	//FragmentManager fragmentManager = getChildFragmentManager();
+    	//fragmentManager.beginTransaction().remove(this).commit();
+    	super.onDestroyView();
+    	Log.i(fragmentTitle,String.valueOf(this.getId()));
+    	
     }
 }

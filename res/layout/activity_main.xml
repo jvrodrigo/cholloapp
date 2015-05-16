@@ -29,6 +29,7 @@
     -->
 
     <fragment
+        android:configChanges="orientation"
         android:id="@+id/navigation_drawer"
         android:name="org.uva.cholloapp.NavigationDrawerFragment"
         android:layout_width="@dimen/navigation_drawer_width"

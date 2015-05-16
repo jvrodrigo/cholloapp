@@ -2,19 +2,23 @@ package org.uva.cholloapp;
 
 import java.util.ArrayList;
 
+import org.uva.cholloapp.fragments.PageOneFragment;
+import org.uva.cholloapp.fragments.PageTwoFragment;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TabHost;
 import android.widget.TabWidget;
 
-public class TabsAdapter extends FragmentPagerAdapter implements
+public class TabsAdapter extends FragmentStatePagerAdapter implements
 		TabHost.OnTabChangeListener, ViewPager.OnPageChangeListener {
 	private final Context mContext;
 	private final TabHost mTabHost;
@@ -56,6 +60,8 @@ public class TabsAdapter extends FragmentPagerAdapter implements
 		mTabHost = tabHost;
 		mViewPager = pager;
 		mTabHost.setOnTabChangedListener(this);
+		// mTabHost.setOnTabChangedListener(new
+		// AnimatedTabHostListener(mContext, tabHost));
 		mViewPager.setAdapter(this);
 		mViewPager.setOnPageChangeListener(this);
 	}
@@ -78,7 +84,6 @@ public class TabsAdapter extends FragmentPagerAdapter implements
 	@Override
 	public Fragment getItem(int position) {
 		TabInfo info = mTabs.get(position);
-
 		return Fragment.instantiate(mContext, info.clss.getName(), info.args);
 
 	}
@@ -106,5 +111,12 @@ public class TabsAdapter extends FragmentPagerAdapter implements
 	}
 
 	public void onPageScrollStateChanged(int state) {
+	}
+
+	// this is called when notifyDataSetChanged() is called
+	@Override
+	public int getItemPosition(Object object) {
+		// refresh all fragments when data set changed
+		return POSITION_NONE;
 	}
 }

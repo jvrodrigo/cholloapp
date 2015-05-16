@@ -5,12 +5,15 @@ import org.uva.cholloapp.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 public class PageTwoFragment extends Fragment
 {
+	private static String fragmentTitle = PageTwoFragment.class.getSimpleName();
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -45,5 +48,16 @@ public class PageTwoFragment extends Fragment
     public void onResume()
     {
         super.onResume();
+    }
+    @Override
+    public void onDestroy(){
+    	super.onDestroy();
+    }
+    @Override
+    public void onDestroyView(){
+    	//FragmentManager fragmentManager = getChildFragmentManager();
+    	//fragmentManager.beginTransaction().remove(this).commit();
+    	super.onDestroyView();
+    	Log.i(fragmentTitle,String.valueOf(this.getId()));
     }
 }
