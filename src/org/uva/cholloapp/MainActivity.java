@@ -1,13 +1,11 @@
 package org.uva.cholloapp;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -21,8 +19,6 @@ public class MainActivity extends ActionBarActivity implements
 	 * Fragment managing the behaviors, interactions and presentation of the
 	 * navigation drawer.
 	 */
-	private PlaceholderFragment fragment_1;
-	private PlaceholderFragment fragment_2;
 	private NavigationDrawerFragment mNavigationDrawerFragment;
 
 	/**
@@ -61,35 +57,6 @@ public class MainActivity extends ActionBarActivity implements
 		}
 		fragmentManager.beginTransaction().replace(R.id.container,
 				PlaceholderFragment.newInstance(position)).commit();
-		//fragment_2.setArguments(getIntent().getExtras());
-		/*switch (position) {
-		case 0:
-			
-			
-			break;
-		case 1:
-			fragmentManager
-			.beginTransaction()
-			.replace(R.id.container,
-					fragment_1).commit();
-			break;
-		case 2:
-			fragmentManager
-			.beginTransaction()
-			.replace(R.id.container,
-					fragment_2).commit();
-			break;*/
-
-		/*default:
-			
-			fragmentManager.beginTransaction().replace(R.id.container,
-					PlaceholderFragment.newInstance(position + 1)).commit();
-			
-			
-			
-			break;
-		}*/
-		
 	}
 
 	public void onSectionAttached(int number) {

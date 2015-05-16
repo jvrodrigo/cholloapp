@@ -1,16 +1,10 @@
 package org.uva.cholloapp;
 
 import org.uva.cholloapp.fragments.*;
-
 import android.app.Activity;
-import android.content.Loader;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;

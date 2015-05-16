@@ -2,17 +2,12 @@ package org.uva.cholloapp;
 
 import java.util.ArrayList;
 
-import org.uva.cholloapp.fragments.PageOneFragment;
-import org.uva.cholloapp.fragments.PageTwoFragment;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TabHost;
