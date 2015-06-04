@@ -6,7 +6,7 @@
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="0dp"
-    tools:context="org.uva.cholloapp.maininterface.MainActivity$PlaceholderFragment" >
+    tools:context="org.cholloapp.maininterface.MainActivity$PlaceholderFragment" >
 <TabHost
         android:id="@+id/tabhost_2"
         android:layout_width="match_parent"
