@@ -89,7 +89,7 @@ public class PageOneFragment extends Fragment {
 			// better yet - use a string resource getString(R.string.your_message)
 			dialog.setMessage(getString(R.string.loading)); 
 			// display dialog
-			dialog.show(); 
+			dialog.show();
 		}
 
 		@Override
