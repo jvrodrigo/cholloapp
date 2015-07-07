@@ -1,7 +1,5 @@
 package org.cholloapp.adapterslist;
 
-import java.util.Date;
-
 public class ProductItem {
 	int id;
 	String name, description;

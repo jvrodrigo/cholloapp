@@ -1,8 +1,6 @@
 package org.cholloapp.fragments;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.apache.http.HttpResponse;
@@ -11,7 +9,6 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.cholloapp.R;
-import org.cholloapp.adapterslist.DrawerItem;
 import org.cholloapp.adapterslist.ProductItem;
 import org.cholloapp.adapterslist.ProductListAdapter;
 import org.json.JSONArray;
@@ -23,17 +20,13 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
 import android.text.format.DateUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class PageTwoFragment extends Fragment {
@@ -113,7 +106,7 @@ public class PageTwoFragment extends Fragment {
 		private ProgressDialog dialog = new ProgressDialog(getActivity());
 		int id;
 		String name, description;
-		CharSequence created, modified;
+		//CharSequence created, modified;
 
 		@Override
 		protected void onPreExecute() {

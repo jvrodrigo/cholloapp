@@ -1,11 +1,7 @@
 package org.cholloapp.adapterslist;
 
-import java.text.SimpleDateFormat;
-import java.util.List;
-
 import org.cholloapp.R;
-
-import android.annotation.SuppressLint;
+import java.util.List;
 import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
@@ -41,7 +37,6 @@ public class ProductListAdapter extends ArrayAdapter<ProductItem> {
 
 		if (view == null) {
 			LayoutInflater inflater = ((Activity) context).getLayoutInflater();
-			
 
 			view = inflater.inflate(layoutResID, parent, false);
 
@@ -53,7 +48,8 @@ public class ProductListAdapter extends ArrayAdapter<ProductItem> {
 					.findViewById(R.id.product_item_name);
 			productHolder.description = (TextView) view
 					.findViewById(R.id.product_item_description);
-			productHolder.created = (TextView) view.findViewById(R.id.product_item_created);
+			productHolder.created = (TextView) view
+					.findViewById(R.id.product_item_created);
 			productHolder.modified = (TextView) view
 					.findViewById(R.id.product_item_modified);
 
@@ -67,12 +63,13 @@ public class ProductListAdapter extends ArrayAdapter<ProductItem> {
 		ProductItem dItem = (ProductItem) this.productItemList.get(position);
 
 		productHolder.itemLayout.setVisibility(LinearLayout.VISIBLE);
-		productHolder.icon.setImageDrawable(view.getResources().getDrawable(dItem.getImage()));
+		productHolder.icon.setImageDrawable(view.getResources().getDrawable(
+				dItem.getImage()));
 		productHolder.name.setText(dItem.getName());
 		productHolder.description.setText(dItem.getDescription());
 		productHolder.created.setText(dItem.getCreated());
 		productHolder.modified.setText(dItem.getModified());
-		
+
 		return view;
 	}
 
